@@ -6,7 +6,6 @@ import GridPostList from "../../components/shared/GridPostList";
 import { multiFormatDateString } from "@/lib/utils";
 import { useUtilContext } from "@/context/AuthContext";
 import { useGetPubliById, useGetUtilPublis, useSupprimerPublication } from "@/lib/react-query/requetesEtMutations";
-import { supprimerPubli } from "@/lib/appwrite/api";
 import { PubliStats } from "@/components/shared/PubliStats";
 
 export default function DetailsPubli(){

@@ -4,7 +4,7 @@ import { INavLink } from "@/types";
 import { sidebarLinks } from "@/constantes";
 
 import { Button } from "@/components/ui/button";
-import { useSignOutAccount } from "@/lib/react-query/queries";
+
 import { INITIAL_USER, useUtilContext } from "@/context/AuthContext";
 import { useFermeressionMutation } from "@/lib/react-query/requetesEtMutations";
 import Loader from './Loader';

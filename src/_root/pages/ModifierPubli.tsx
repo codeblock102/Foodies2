@@ -4,7 +4,7 @@ import Loader from "../../components/shared/Loader";
 import PostForm from "../../components/formulaires/PostForm";
 import { useGetPubliById } from "@/lib/react-query/requetesEtMutations";
 
-function ModifierPubli(){
+export default function ModifierPubli(){
   const { id } = useParams();
   const { data: publi, isLoading } = useGetPubliById(id);
 

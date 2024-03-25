@@ -48,6 +48,7 @@ export default function Explorer(){
 
   const shouldShowSearchResults = rechercheValeur !== "";
   const shouldShowPosts = !shouldShowSearchResults && 
+  //@ts-ignore
   publis.pages.every((item) => item.documents.length === 0);
 
   return (
@@ -98,6 +99,7 @@ export default function Explorer(){
           <p className="text-light-4 mt-10 text-center w-full">End of posts</p>
         ) : (
           publis.pages.map((item, index) => (
+            //@ts-ignore
             <GridPostList key={`page-${index}`} publis={item.documents} />
           ))
         )}
