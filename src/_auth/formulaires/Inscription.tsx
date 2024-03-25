@@ -1,10 +1,9 @@
 import { z } from "zod";
-import { Link,Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,7 +24,7 @@ export default function Inscription() {
     const { toast } = useToast();
     const naviguer = useNavigate();
 
-    const {checkAuthUtil ,isLoading: isUtilLoading} = useUtilContext()
+    const {checkAuthUtil} = useUtilContext()
    
     // 1. Define your form.
     const form = useForm<z.infer<typeof InscriptionValidation>>({
@@ -39,9 +38,9 @@ export default function Inscription() {
       });
     
   
-  
+  //@ts-ignore
 const {mutateAsync:creerCompteUtil,isPending:isCreerUtil} = useCreerUtilCompteMutation();
-const {mutateAsync:ouvrirSessionUtil,isPending:isSigninIn} = useOuvrirSessionMutation ();
+const {mutateAsync:ouvrirSessionUtil} = useOuvrirSessionMutation ();
   
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof InscriptionValidation>) {

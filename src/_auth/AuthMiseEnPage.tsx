@@ -1,5 +1,4 @@
 import {Outlet, Navigate} from 'react-router-dom';
-import { useUtilContext } from "@/context/AuthContext";
 
 export default function AuthMiseEnPage() {
   const estAuth = false;// pour savoir si l'utilisateur est authentifié

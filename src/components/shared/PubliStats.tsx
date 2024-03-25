@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 import { checkIsLiked } from "@/lib/utils";
 
 import { useAimerPubli, useGetUtilPresent, useSauvegarderPublication, useSupprimerPubliSauvegarde } from "@/lib/react-query/requetesEtMutations";
-import { useUtilContext } from "@/context/AuthContext";
 
 type PostStatsProps = {
   publication: Models.Document;

@@ -1,7 +1,7 @@
 import {
     useQuery, useMutation, useQueryClient, useInfiniteQuery
 } from '@tanstack/react-query'
-import { aimerPubli, creerPubli, fermerSession, getCurrentUtil, getPubliById, getPubliInfini, getPublisRecentes, getUtilPublis, mettreUtilBd, ouvrirSessionUtil, sauvegarderPubli, searchPublis, supprimerPubli, supprimerPubliSauvegarde, updatePubli } from '../appwrite/api'
+import { aimerPubli, creerPubli, fermerSession, getCurrentUtil, getPubliById, getPublisRecentes, getUtilPublis, mettreUtilBd, ouvrirSessionUtil, sauvegarderPubli, searchPublis, supprimerPubli, supprimerPubliSauvegarde, updatePubli } from '../appwrite/api'
 import { IActualiserPubli, INouvelUtil, INouvellePubli } from '@/types'
 import { QUERY_KEYS } from './queryKeys'
 import { Query } from 'appwrite'
@@ -214,6 +214,7 @@ export const useUpdatePubli = () => {
   return useInfiniteQuery({
     queryKey: [QUERY_KEYS.GET_PUBLIS_INFINI],
     queryFn: getInfinitePosts,
+    //@ts-ignore
     getNextPageParam: (lastPage) => {
       // If there's no data, there are no more pages.
       if (lastPage && lastPage.documents.length === 0) {
@@ -221,6 +222,7 @@ export const useUpdatePubli = () => {
       }
 
       // Use the $id of the last document as the cursor.
+      //@ts-ignore
       const lastId = lastPage.documents[lastPage?.documents.length - 1].$id;
       return lastId;
     },
