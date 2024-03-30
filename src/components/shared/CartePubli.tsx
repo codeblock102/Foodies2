@@ -16,8 +16,8 @@ export default function CartePubli ({ publication }: CartePubliProps) {
 
   return (
     <div className="post-card">
-      <div className="entete-publi flex flex-between w-full flex justify-between items-center bg-white rounded-t-xl">
-        <div className="flex items-center gap-3 w-4/6 justify-start">
+      <div className="entete-publi flex flex-between w-full flex justify-between items-center bg-white rounded-t-xl h-14 px-4">
+        <div className="flex items-center gap-3 w-5/6 justify-start">
           <Link to={`/profile/${publication.createur.$id}`}>
             <img
               src={
@@ -25,7 +25,7 @@ export default function CartePubli ({ publication }: CartePubliProps) {
                 "/assets/icons/profile-placeholder.svg"
               }
               alt="createur"
-              className="w-12 lg:h-12 rounded-full"
+              className="w-8 lg:h-8 rounded-full"
             />
           </Link>
 

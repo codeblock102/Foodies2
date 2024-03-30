@@ -69,8 +69,8 @@ export function PubliStats({ publication, utilId }: PostStatsProps){
 
   return (
     <div
-      className={`flex justify-between items-center z-20 ${containerStyles}`}>
-      <div className="flex gap-2 mr-5">
+      className={`footer-publi bg-white h-14 rounded-b-xl px-4 flex justify-between items-center z-20 ${containerStyles}`}>
+      <div className="flex w-fit gap-2">
         <img
           src={`${
             checkIsLiked(likes, utilId)
@@ -78,8 +78,8 @@ export function PubliStats({ publication, utilId }: PostStatsProps){
               : "/assets/icons/like.svg"
           }`}
           alt="like"
-          width={20}
-          height={20}
+          width={30}
+          height={30}
           onClick={(e) => handleLikePubli(e)}
           className="cursor-pointer"
         />
@@ -88,14 +88,48 @@ export function PubliStats({ publication, utilId }: PostStatsProps){
 
       <div className="flex gap-2">
         <img
+          src={ "/assets/icons/msgs.svg"}
+          alt="share"
+          width={30}
+          height={30}
+          className="cursor-pointer"
+          // onClick={(e) => handleSavePubli(e)}
+        />
+      </div>
+      <div className="flex gap-2">
+        <img
+          src={ "/assets/icons/share-alt-solid.svg"}
+          alt="share"
+          width={25}
+          height={25}
+          className="cursor-pointer"
+          // onClick={(e) => handleSavePubli(e)}
+        />
+        
+      </div>
+      <div className="flex gap-2">
+        <img
+          src={ "/assets/icons/file-alt-regular.svg"}
+          alt="share"
+          width={25}
+          height={25}
+          className="cursor-pointer"
+          // onClick={(e) => handleSavePubli(e)}
+        />
+        
+      </div>
+      
+      <div className="flex gap-2">
+        <img
           src={isSaved ? "/assets/icons/saved.svg" : "/assets/icons/save.svg"}
           alt="share"
-          width={20}
-          height={20}
+          width={30}
+          height={30}
           className="cursor-pointer"
           onClick={(e) => handleSavePubli(e)}
         />
       </div>
+      
     </div>
   );
 };

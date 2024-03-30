@@ -41,7 +41,7 @@ return (
         ) : (
           <ul className="flex flex-col flex-1 gap-9 w-full items-center">
             {publications?.documents.map((publication: Models.Document) => (
-              <li key={publication.$id} className=" publication flex justify-center w-full w-3/4">
+              <li key={publication.$id} className=" publication flex justify-center w-2/4">
                 <CartePubli publication={publication} />
               </li>
             ))}
