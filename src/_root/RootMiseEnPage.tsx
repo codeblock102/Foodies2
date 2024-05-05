@@ -6,7 +6,7 @@ import '../globals.css'
 export default function RootMiseEnPage() {
   
   return ( <div className="w-full md:flex">
-    <SideBarGauche />
+    {/* <SideBarGauche /> */}
   
     <Topbar />
 

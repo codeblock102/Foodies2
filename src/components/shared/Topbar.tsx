@@ -15,21 +15,21 @@ export default function Topbar() {
         }
     },[isSuccess])
   return (
-    <section className='topbar w-full h-10 lg:hidden'>
-        <div className="flex flex-between py-4 px-5 justify-between">
+   
+        <div className="Topbar flex flex-between py-4 px-5 justify-between  w-full h-12 lg:hidden border-solid border-2 border-sky-500">
             <Link to='/' className='flex gap-3 items-center'>
             <h1 className='logo'>Foodies</h1>
             </Link>
             <div className="flex gap-4">
-                <Button variant='ghost' className='shad-button_ghost' onClick={()=>fermerSession()}>
+                {/* <Button variant='ghost' className='shad-button_ghost' onClick={()=>fermerSession()}>
                     <img src="/assets/images/fermerSession.svg" alt="" />
-                </Button>
-                <Link to={`/profile/${util.id}`} className='flex-center gap-3'>
+                </Button> */}
+                {/* <Link to={`/profile/${util.id}`} className='flex-center gap-3'>
                     <img src={util.imageUrl} alt="" className='h-8 w-8 rounded-full'/>
-                </Link>
+                </Link> */}
             </div>
         </div>
         
-    </section>
+   
   )
 }
