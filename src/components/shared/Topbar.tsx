@@ -16,11 +16,19 @@ export default function Topbar() {
     },[isSuccess])
   return (
    
-        <div className="Topbar flex flex-between py-4 px-5 justify-between  w-full h-12 lg:hidden border-solid border-2 border-sky-500">
+        <div className="Topbar flex flex-between py-4 px-5 justify-between  w-full h-16 lg:hidden border-solid border-2 border-sky-500">
             <Link to='/' className='flex gap-3 items-center'>
             <h1 className='logo'>Foodies</h1>
             </Link>
-            <div className="flex gap-4">
+            <div className="flex gap-4 h-fit">
+            <img
+            src={ "/assets/icons/cog-solid.svg"}
+            alt="share"
+            width={30}
+            height={30}
+            className="cursor-pointer"
+            // onClick={(e) => handleSavePubli(e)}
+            />
                 {/* <Button variant='ghost' className='shad-button_ghost' onClick={()=>fermerSession()}>
                     <img src="/assets/images/fermerSession.svg" alt="" />
                 </Button> */}
