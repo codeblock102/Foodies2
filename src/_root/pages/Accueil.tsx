@@ -32,16 +32,15 @@ if (isErrorPosts || isErrorCreators) {
 }
 
 return (
-  <div className="flex flex-1">
+  <div className="Accueil flex flex-1 w-full">
     <div className="publications-accueil">
       <div className="home-posts">
-        <h2 className="h3-bold md:h2-bold text-left w-full">Home Feed</h2>
         {isPubliLoading && !publications ? (
           <Loader />
         ) : (
-          <ul className="flex flex-col flex-1 gap-9 w-full items-center">
+          <ul className="flex flex-col flex-1 gap-9 mt-9 w-full items-center">
             {publications?.documents.map((publication: Models.Document) => (
-              <li key={publication.$id} className=" publication flex justify-center w-2/4">
+              <li key={publication.$id} className=" publication flex justify-center">
                 <CartePubli publication={publication} />
               </li>
             ))}
@@ -50,7 +49,7 @@ return (
       </div>
     </div>
 
-    <div className="createurs-tendance">
+    {/* <div className="createurs-tendance">
       <h3 className="h3-bold text-light-1 text-center">Top Creators</h3>
       {isUserLoading && !creators ? (
         <Loader />
@@ -63,7 +62,7 @@ return (
           ))}
         </ul>
       )}
-    </div>
+    </div> */}
   </div>
 );
 }

@@ -72,7 +72,7 @@ export default function DetailsPubli(){
                   <p className="base-medium lg:body-bold text-light-1">
                     {publi?.createur.name}
                   </p>
-                  <div className="flex-center gap-2 text-light-3">
+                  {/* <div className="flex-center gap-2 text-light-3">
                     <p className="subtle-semibold lg:small-regular ">
                       {multiFormatDateString(publi?.$createdAt)}
                     </p>
@@ -80,7 +80,7 @@ export default function DetailsPubli(){
                     <p className="subtle-semibold lg:small-regular">
                       {publi?.location}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </Link>
 

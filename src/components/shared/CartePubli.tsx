@@ -15,7 +15,7 @@ export default function CartePubli ({ publication }: CartePubliProps) {
   if (!publication.createur) return;
 
   return (
-    <div className="post-card">
+    <div className="CartePubli w-full">
       <div className="entete-publi flex flex-between w-full flex justify-between items-center bg-white rounded-t-xl h-14 px-4">
         <div className="flex items-center gap-3 w-5/6 justify-start">
           <Link to={`/profile/${publication.createur.$id}`}>
@@ -34,12 +34,12 @@ export default function CartePubli ({ publication }: CartePubliProps) {
               {publication.createur.name}
             </p>
             <div className="flex flex-center gap-2 ">
-              <p className="subtle-semibold lg:small-regular ">
+              <p className="subtle-semibold lg:small-regular ml-10 ">
                 {multiFormatDateString(publication.$createdAt)}
               </p>
-              <p className="subtle-semibold lg:small-regular">
+              {/* <p className="subtle-semibold lg:small-regular">
                 {publication.location}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

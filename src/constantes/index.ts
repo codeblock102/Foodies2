@@ -33,18 +33,30 @@ export const sidebarLinks = [
       label: "Accueil",
     },
     {
-      imgURL: "/assets/icons/wallpaper.svg",
+      imgURL: "/assets/icons/search.svg",
       route: "/explorer",
       label: "Explorer",
-    },
-    {
-      imgURL: "/assets/icons/bookmark.svg",
-      route: "/sauvegardes",
-      label: "Sauvegardes",
     },
     {
       imgURL: "/assets/icons/gallery-add.svg",
       route: "/creer-publication",
       label: "Creer Publi",
     },
+    
+    {
+      imgURL: "/assets/icons/notifications.svg",
+      route: "/",
+      label: "Notifications",
+    },
+    {
+      imgURL: "/assets/icons/notifications.svg",
+      route: "/",
+      label: "Notifications",
+    },
+    // {
+    //   imgURL: "/assets/icons/bookmark.svg",
+    //   route: "/sauvegardes",
+    //   label: "Sauvegardes",
+    // },
+   
   ];

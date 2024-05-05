@@ -10,7 +10,7 @@ export default function RootMiseEnPage() {
   
     <Topbar />
 
-  <section className="mise-en-page flex">
+  <section className="mise-en-page flex  w-screen h-screen">
     <Outlet />
   </section>
   

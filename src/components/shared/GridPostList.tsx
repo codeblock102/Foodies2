@@ -18,9 +18,9 @@ const GridPostList = ({
     const { util } = useUtilContext();
 
     return (
-        <ul className="grid-container">
+        <ul className="grid-container flex flex-wrap mx-auto justify-start">
             {publis.map((publi) => (
-                <li key={publi.$id} className="relative min-w-80 h-80">
+                <li key={publi.$id} className="relative min-w-1/2 h-48 m-1">
                     <Link to={`/publis/${publi.$id}`} className="grid-post_link">
                         <img
                             src={publi.imageUrl}
@@ -29,7 +29,7 @@ const GridPostList = ({
                         />
                     </Link>
 
-                    <div className="grid-post_user">
+                    {/* <div className="grid-post_user">
                         {showUtil && (
                             <div className="flex items-center justify-start gap-2 flex-1">
                                 <img
@@ -44,7 +44,7 @@ const GridPostList = ({
                             </div>
                         )}
                         {showStats && <PubliStats publication={publi} utilId={util.id} />}
-                    </div>
+                    </div> */}
                 </li>
             ))}
         </ul>

@@ -5,7 +5,7 @@ export default function BarreBas() {
   const { pathname } = useLocation();
 
   return (
-    <section className="bottom-bar flex justify-center lg:hidden">
+    <section className="BarreBas flex justify-evenly items-center lg:hidden sticky bottom-14 bg-white w-10/12 h-14 mx-auto rounded-full border-solid border-2 border-sky-500v">
       {bottombarLinks.map((link) => {
         const isActive = pathname === link.route;
         return (
@@ -14,16 +14,16 @@ export default function BarreBas() {
             to={link.route}
             className={`${
               isActive && "rounded-[10px] bg-primary-500 "
-            } flex-center flex-col gap-1 p-2 transition`}>
+            }   gap-1  transition`}>
             <img
               src={link.imgURL}
               alt={link.label}
-              width={16}
-              height={16}
+              width={30}
+              height={20}
               className={`${isActive && "invert-white"}`}
             />
-
-            <p className="tiny-medium text-light-2">{link.label}</p>
+      
+           
           </Link>
         );
       })}
