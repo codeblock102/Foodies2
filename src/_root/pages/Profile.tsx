@@ -1,29 +1,17 @@
-import {Route,Routes, useParams, Link, useNavigate,redirect, useLocation, Outlet } from "react-router-dom";
+import {Route,Routes, useParams, Outlet } from "react-router-dom";
 
-import { Button } from "../../components/ui/button";
 import Loader  from "../../components/shared/Loader";
 import GridPostList from "../../components/shared/GridPostList";
-import { multiFormatDateString } from "@/lib/utils";
-import { useGetPublis, useGetUtilById, useSearchPublis } from "@/lib/react-query/requetesEtMutations";
+import { useGetUtilById} from "@/lib/react-query/requetesEtMutations";
 
-import { useUtilContext } from "@/context/AuthContext";
-import { useGetPubliById, useGetUtilPublis, useSupprimerPublication } from "@/lib/react-query/requetesEtMutations";
-import { PubliStats } from "@/components/shared/PubliStats";
-import { useEffect } from "react";
+
 
 
 export default function Profile() {
-  const naviguer= useNavigate();
   const { id } = useParams();
-  const { util } = useUtilContext();
-  const { data: publi, isLoading } = useGetPubliById(id);
   const { data: currentUtil } = useGetUtilById(id || "");
-  const { pathname } = useLocation();
 
-  const { data: utilPublis, isLoading: isUserPostLoading } = useGetUtilPublis(
-    publi?.createur.$id
-  );
- 
+  
   if (!currentUtil)
     return (
       <div className="flex-center w-full h-full">
@@ -31,9 +19,7 @@ export default function Profile() {
       </div>
     );
   
-  const relatedPosts = utilPublis?.documents.filter(
-    (utilPubli) => utilPubli.$id !== id
-  );
+  
   return (
     <div className="Profile bg-white w-full">
       {/* Header: User Info */}

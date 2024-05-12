@@ -13,8 +13,7 @@ const {
   isError: isErrorPosts,
 } = useGetPublisRecentes();
 const {
-  data: creators,
-  isLoading: isUserLoading,
+ 
   isError: isErrorCreators,
 } = useGetUtils(10);
 
