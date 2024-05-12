@@ -31,14 +31,14 @@ export default function Topbar() {
             <h1 className='logo'>Foodies</h1>
             </Link>
             <div className="flex gap-4 h-fit mb-16">
-            <img
+            {/* <img
             src={ "/assets/icons/cog-solid.svg"}
             alt="share"
             width={30}
             height={30}
             className="cursor-pointer"
             // onClick={(e) => handleSavePubli(e)}
-            />
+            /> */}
         <Button
         variant="ghost"
         className="shad-button_ghost"

@@ -17,7 +17,7 @@ export default function EditPubli(){
     );
 
   return (
-    <div className="flex flex-1">
+    <div className="EditPubli w-4/5">
       <div className="common-container">
         <div className="flex-start gap-3 justify-start w-full max-w-5xl">
           <img
@@ -27,7 +27,7 @@ export default function EditPubli(){
             alt="edit"
             className="invert-white"
           />
-          <h2 className="h3-bold md:h2-bold text-left w-full">Edit Post</h2>
+          <h2 className="h3-bold md:h2-bold text-left w-full">Modifieer Publi</h2>
         </div>
 
         {isLoading ? <Loader /> : <PostForm action="Update" publi={publi} />}

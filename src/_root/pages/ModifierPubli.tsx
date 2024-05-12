@@ -16,7 +16,7 @@ export default function ModifierPubli(){
     );
 
   return (
-    <div className="flex flex-1">
+    <div className="ModifierPubli">
       <div className="common-container">
         <div className="flex-start gap-3 justify-start w-full max-w-5xl">
           <img

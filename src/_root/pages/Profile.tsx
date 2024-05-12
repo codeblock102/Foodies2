@@ -24,7 +24,7 @@ export default function Profile() {
     <div className="Profile bg-white w-full">
       {/* Header: User Info */}
       <div className="Info-Util bg-gray-100 p-4 flex justify-between items-center h-1/5 flex-col ">
-        <div className="util-section flex items-center flex-col pt-20 text-center">
+        <div className="util-section flex items-center flex-col pt-20 md:pt-36 text-center">
         <img
               src={
                 currentUtil.imageUrl || "/assets/icons/profile-placeholder.svg"

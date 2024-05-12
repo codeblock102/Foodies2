@@ -14,7 +14,7 @@ const GridPostList = ({
 }: GridPostListProps) => {
 
     return (
-        <ul className="grid-container flex flex-wrap mx-auto justify-start">
+        <ul className="grid-container md:4/5 flex flex-wrap mx-auto justify-start">
             {publis.map((publi) => (
                 <li key={publi.$id} className="relative min-w-1/2 h-48 m-1">
                     <Link to={`/publis/${publi.$id}`} className="grid-post_link">

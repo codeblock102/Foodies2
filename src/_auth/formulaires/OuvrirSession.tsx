@@ -63,7 +63,7 @@ export default function OuvrirSession() {
   }
   return (
     <Form {...form}>
-      <div className="sm:w-420 flex flex-center flex-col items-center">
+      <div className="sm:w-420 flex flex-center flex-col items-center w-4/5 mx-auto">
         <h1 className="logo text-4xl mb-12">Foodies</h1>
         
         

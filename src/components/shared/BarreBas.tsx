@@ -8,7 +8,7 @@ export default function BarreBas() {
   const { util } = useUtilContext();
 
   return (
-    <section className="BarreBas flex justify-evenly items-center lg:hidden fixed bottom-14 bg-white w-10/12 h-14 ml-8 rounded-full border-solid border-2 border-sky-500v">
+    <section className="BarreBas flex justify-evenly items-center lg:hidden fixed bottom-14 bg-white w-10/12 h-14 md:ml-14 ml-8 rounded-full border-solid border-2 border-sky-500v">
       {bottombarLinks.map((link) => {
         const isActive = pathname === link.route;
         return (

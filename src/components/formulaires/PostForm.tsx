@@ -84,7 +84,7 @@ export default function PostForm({ publi, action }: PubliFormProps) {
             name="file"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="shad-form_label">Add Photos</FormLabel>
+                <FormLabel className="shad-form_label">Ajouter Photo</FormLabel>
                 <FormControl>
                   <FileUploader
                     fieldChange={field.onChange}

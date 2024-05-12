@@ -4,12 +4,12 @@ import { Outlet } from "react-router-dom";
 import '../globals.css'
 export default function RootMiseEnPage() {
   
-  return ( <div className="w-full md:flex">
+  return ( <div className="w-full ">
     {/* <SideBarGauche /> */}
   
     <Topbar />
 
-  <section className="mise-en-page flex  w-screen min-h-screen">
+  <section className="mise-en-page flex justify-center w-screen min-h-screen">
     <Outlet />
   </section>
   
