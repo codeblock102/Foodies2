@@ -98,6 +98,10 @@ height: auto;
   background-size: cover;
   background-position-x: 40em;
   overflow: hidden;
+  
+}
+ input[type=text]{
+  color: #000000;
 }
 .overlay-noir{
 
