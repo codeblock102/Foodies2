@@ -7,7 +7,7 @@ import { Button } from '../ui/button';
 
 export default function Topbar() {
     const {mutate: fermerSession, isSuccess} = useFermeressionMutation();
-    const { util, setUtil, setIsAuthenticated, isLoading } = useUtilContext();
+    const { setUtil, setIsAuthenticated } = useUtilContext();
     const navigate  = useNavigate();
 
     const gererFermerSession = async (
