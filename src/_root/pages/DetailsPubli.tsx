@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate} from "react-router-dom";
 
 import { Button } from "../../components/ui/button";
 import Loader  from "../../components/shared/Loader";
@@ -29,7 +29,60 @@ export default function DetailsPubli(){
   };
 
   return (
+    
     <div className="post_details-container">
+      <div className="entete-publi flex flex-between w-full flex justify-between items-center bg-white rounded-t-xl h-14 px-4">
+        <div className="flex items-center gap-3 w-5/6 justify-start">
+          <Link to={`/profile/${publi?.createur.$id}`}>
+            <img
+              src={
+                publi?.createur.imageUrl ||
+                "/assets/icons/profile-placeholder.svg"
+              }
+              alt="createur"
+              className="w-8 lg:h-8 rounded-full"
+            />
+          </Link>
+
+          <div className="flex flex-row">
+            <p className="base-medium lg:body-bold text-light-1">
+              {publi?.createur.name}
+            </p>
+            <div className="flex flex-center gap-2 ">
+              <p className="subtle-semibold lg:small-regular ml-10 ">
+                {multiFormatDateString(publi?.$createdAt)}
+              </p>
+              {/* <p className="subtle-semibold lg:small-regular">
+                {publication.location}
+              </p> */}
+            </div>
+          </div>
+        </div>
+
+        <Link
+          to={`/edit-publication/${publi?.$id}`}
+          className={`${util.id !== publi?.createur.$id && "hidden"}`}>
+          <img
+            src={"/assets/icons/edit.svg"}
+            alt="edit"
+            width={30}
+            height={30}
+          />
+        </Link>
+        <Button
+                  onClick={gererSuprimerPubli}
+                  variant="ghost"
+                  className={`ost_details-delete_btn ${
+                    util.id !== publi?.createur.$id && "hidden"
+                  }`}>
+                  <img
+                    src={"/assets/icons/delete.svg"}
+                    alt="delete"
+                    width={30}
+                    height={30}
+                  />
+                </Button>
+      </div>
       <div className="hidden md:flex max-w-5xl w-full">
         <Button
           onClick={() => navigate(-1)}
@@ -57,64 +110,12 @@ export default function DetailsPubli(){
 
           <div className="post_details-info">
             <div className="flex-between w-full">
-              <Link
-                to={`/profile/${publi?.createur.$id}`}
-                className="flex items-center gap-3">
-                <img
-                  src={
-                    publi?.createur.imageUrl ||
-                    "/assets/icons/profile-placeholder.svg"
-                  }
-                  alt="creator"
-                  className="w-8 h-8 lg:w-12 lg:h-12 rounded-full"
-                />
-                <div className="flex gap-1 flex-col">
-                  <p className="base-medium lg:body-bold text-light-1">
-                    {publi?.createur.name}
-                  </p>
-                  {/* <div className="flex-center gap-2 text-light-3">
-                    <p className="subtle-semibold lg:small-regular ">
-                      {multiFormatDateString(publi?.$createdAt)}
-                    </p>
-                    •
-                    <p className="subtle-semibold lg:small-regular">
-                      {publi?.location}
-                    </p>
-                  </div> */}
-                </div>
-              </Link>
-
-              <div className="flex-center gap-4">
-                <Link
-                  to={`/edit-publication/${publi?.$id}`}
-                  className={`${util.id !== publi?.createur.$id && "hidden"}`}>
-                  <img
-                    src={"/assets/icons/edit.svg"}
-                    alt="edit"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-
-                <Button
-                  onClick={gererSuprimerPubli}
-                  variant="ghost"
-                  className={`ost_details-delete_btn ${
-                    util.id !== publi?.createur.$id && "hidden"
-                  }`}>
-                  <img
-                    src={"/assets/icons/delete.svg"}
-                    alt="delete"
-                    width={24}
-                    height={24}
-                  />
-                </Button>
-              </div>
+              
             </div>
 
             <hr className="border w-full border-dark-4/80" />
 
-            <div className="flex flex-col flex-1 w-full small-medium lg:base-regular">
+            {/* <div className="flex flex-col flex-1 w-full small-medium lg:base-regular">
               <p>{publi?.caption}</p>
               <ul className="flex gap-1 mt-2">
                 {publi?.tags.map((tag: string, index: string) => (
@@ -125,8 +126,8 @@ export default function DetailsPubli(){
                   </li>
                 ))}
               </ul>
-            </div>
-
+            </div> */}
+            
             <div className="w-full">
               <PubliStats publication={publi} utilId={util.id} />
             </div>
@@ -138,7 +139,7 @@ export default function DetailsPubli(){
         <hr className="border w-full border-dark-4/80" />
 
         <h3 className="body-bold md:h3-bold w-full my-10">
-          More Related Posts
+          Plus de publications
         </h3>
         {isUserPostLoading || !relatedPosts ? (
           <Loader />

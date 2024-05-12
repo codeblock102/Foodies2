@@ -46,7 +46,21 @@ export async function mettreUtilBd(util: {
       console.log(erreur);
    }
 }
+export async function getUtilById(userId: string) {
+  try {
+    const user = await databases.getDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.userCollectionId,
+      userId
+    );
 
+    if (!user) throw Error;
+
+    return user;
+  } catch (error) {
+    console.log(error);
+  }
+}
 export async function ouvrirSessionUtil(util:{email:string,password:string}){
    try{
         

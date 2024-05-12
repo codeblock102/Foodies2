@@ -6,7 +6,7 @@ import { multiFormatDateString } from "@/lib/utils";
 import { useUtilContext } from "@/context/AuthContext";
 
 type CartePubliProps = {
-    publication: Models.Document;
+    publication: Models.Document ;
 };
 
 export default function CartePubli ({ publication }: CartePubliProps) {

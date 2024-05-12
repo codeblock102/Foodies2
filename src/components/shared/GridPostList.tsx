@@ -24,8 +24,10 @@ const GridPostList = ({
                     <Link to={`/publis/${publi.$id}`} className="grid-post_link">
                         <img
                             src={publi.imageUrl}
+                            width={40}
+                            height={40}
                             alt="post"
-                            className="h-full w-full object-cover"
+                            className="h-full w-full object-cover rounded-lg"
                         />
                     </Link>
 

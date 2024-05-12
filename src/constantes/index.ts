@@ -20,7 +20,7 @@ export const sidebarLinks = [
       label: "Sauvegardes",
     },
     {
-      imgURL: "/assets/icons/gallery-add.svg",
+      imgURL: "/assets/icons/plus-solid.svg",
       route: "/creer-publication",
       label: "Creer Publi",
     },
@@ -33,12 +33,12 @@ export const sidebarLinks = [
       label: "Accueil",
     },
     {
-      imgURL: "/assets/icons/search.svg",
+      imgURL: "/assets/icons/magnifying-glass-solid.svg",
       route: "/explorer",
       label: "Explorer",
     },
     {
-      imgURL: "/assets/icons/gallery-add.svg",
+      imgURL: "/assets/icons/plus-solid.svg",
       route: "/creer-publication",
       label: "Creer Publi",
     },
@@ -49,9 +49,9 @@ export const sidebarLinks = [
       label: "Notifications",
     },
     {
-      imgURL: "/assets/icons/notifications.svg",
-      route: "/",
-      label: "Notifications",
+      imgURL: "/assets/icons/user-solid.svg",
+      route: "/profile/:id",
+      label: "Profile",
     },
     // {
     //   imgURL: "/assets/icons/bookmark.svg",

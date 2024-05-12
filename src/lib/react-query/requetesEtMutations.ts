@@ -1,7 +1,7 @@
 import {
     useQuery, useMutation, useQueryClient, useInfiniteQuery
 } from '@tanstack/react-query'
-import { aimerPubli, creerPubli, fermerSession, getCurrentUtil, getPubliById, getPublisRecentes, getUtilPublis, mettreUtilBd, ouvrirSessionUtil, sauvegarderPubli, searchPublis, supprimerPubli, supprimerPubliSauvegarde, updatePubli } from '../appwrite/api'
+import { aimerPubli, creerPubli, fermerSession, getCurrentUtil, getPubliById, getPublisRecentes, getUtilById, getUtilPublis, mettreUtilBd, ouvrirSessionUtil, sauvegarderPubli, searchPublis, supprimerPubli, supprimerPubliSauvegarde, updatePubli } from '../appwrite/api'
 import { IActualiserPubli, INouvelUtil, INouvellePubli } from '@/types'
 import { QUERY_KEYS } from './queryKeys'
 import { Query } from 'appwrite'
@@ -123,7 +123,13 @@ export const useGetUtilPresent = () => {
         queryFn: getCurrentUtil,
     });
 };
-
+export const useGetUtilById = (utilId: string) => {
+  return useQuery({
+    queryKey: [QUERY_KEYS.GET_UTIL_BY_ID, utilId],
+    queryFn: () => getUtilById(utilId),
+    enabled: !!utilId,
+  });
+};
 export async function getUtils(limit?: number) {
     const queries: any[] = [Query.orderDesc("$createdAt")];
 

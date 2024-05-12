@@ -16,7 +16,7 @@ export default function Topbar() {
     },[isSuccess])
   return (
    
-        <div className="Topbar flex flex-between py-4 px-5 justify-between  w-full h-14 lg:hidden border-solid border-2 border-sky-500">
+        <div className="Topbar flex flex-between py-4 px-5 justify-between  w-full h-14 lg:hidden">
             <Link to='/' className='flex gap-3 items-center '>
             <h1 className='logo'>Foodies</h1>
             </Link>
