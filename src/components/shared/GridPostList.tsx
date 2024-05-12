@@ -10,8 +10,7 @@ type GridPostListProps = {
 
 const GridPostList = ({
     publis,
-    showUtil = true,
-    showStats = true,
+   
 }: GridPostListProps) => {
 
     return (

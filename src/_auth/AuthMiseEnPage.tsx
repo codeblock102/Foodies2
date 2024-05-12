@@ -6,10 +6,13 @@ export default function AuthMiseEnPage() {
     <>
     {estAuth ? (<Navigate to={"/"}/>): 
     (<>
-      <section className='flex flex-1 justify-center items-center flex-col py-10'>
-        <Outlet/>
+    <div className="PageAuth w-full h-auto  z-0">
+      <div className="relative top-36 mt-12 z-20 text-white"><Outlet/></div>
+      <section className='overlay-noir bg-black flex flex-1 justify-center items-center flex-col   relative z-10 opacity-50'>
+       
       </section>
-      <img src="/assets/images/connectionImg.jpg" alt="image page" className=' hidden xl:block h-screen w-1/2 object-cover bg-no-repeat'/>
+      
+      </div>
     </>
    
     )}

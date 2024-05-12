@@ -92,3 +92,15 @@ height: auto;
 .SideBarGauche{
   width:17%;
 }
+
+.PageAuth{
+  background-image: url("../public/assets/images/connectionImg.jpg");
+  background-size: cover;
+  background-position-x: 40em;
+  overflow: hidden;
+}
+.overlay-noir{
+
+  height: 80em;
+  bottom: 42em;
+}

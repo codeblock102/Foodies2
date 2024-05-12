@@ -2,10 +2,23 @@ import { useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import '../../fonts.css'
 import { useFermeressionMutation } from '@/lib/react-query/requetesEtMutations'
+import { useUtilContext, INITIAL_USER } from '@/context/AuthContext';
+import { Button } from '../ui/button';
 
 export default function Topbar() {
     const {mutate: fermerSession, isSuccess} = useFermeressionMutation();
+    const { util, setUtil, setIsAuthenticated, isLoading } = useUtilContext();
     const navigate  = useNavigate();
+
+    const gererFermerSession = async (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+      ) => {
+        e.preventDefault();
+        fermerSession();
+        setIsAuthenticated(false);
+        setUtil(INITIAL_USER);
+        navigate("/ouvrirSession"); 
+      };
     useEffect(()=>{
         if(isSuccess) {
             navigate(0);
@@ -26,12 +39,13 @@ export default function Topbar() {
             className="cursor-pointer"
             // onClick={(e) => handleSavePubli(e)}
             />
-                {/* <Button variant='ghost' className='shad-button_ghost' onClick={()=>fermerSession()}>
-                    <img src="/assets/images/fermerSession.svg" alt="" />
-                </Button> */}
-                {/* <Link to={`/profile/${util.id}`} className='flex-center gap-3'>
-                    <img src={util.imageUrl} alt="" className='h-8 w-8 rounded-full'/>
-                </Link> */}
+        <Button
+        variant="ghost"
+        className="shad-button_ghost"
+        onClick={(e) => gererFermerSession(e)}>
+        <img src="/assets/icons/logout.svg" alt="logout" />
+        <p className="small-medium lg:base-medium">Logout</p>
+      </Button>
             </div>
         </div>
         

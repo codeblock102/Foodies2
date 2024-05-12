@@ -65,12 +65,12 @@ export default function OuvrirSession() {
     <Form {...form}>
       <div className="sm:w-420 flex flex-center flex-col items-center">
         <h1 className="logo text-4xl mb-12">Foodies</h1>
-        <h2 className="h3-bold md:h2-bold sm:pt-12">Ouvrir une session</h2>
+        
         
 
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-5 w-full mt-4"
+          className="flex flex-col gap-5 w-full mt-4 w-4/5"
         >
           
           <FormField
@@ -112,7 +112,7 @@ export default function OuvrirSession() {
             Vous avez déjà un compte?{" "}
             <Link
               to="/inscription"
-              className="text-primary text-small-semibold ml-1"
+              className=" text-small-semibold ml-1 font-bold"
             >
               Créer un nouveau compte
             </Link>

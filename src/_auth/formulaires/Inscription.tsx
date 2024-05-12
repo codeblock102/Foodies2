@@ -77,7 +77,7 @@ const {mutateAsync:ouvrirSessionUtil} = useOuvrirSessionMutation ();
   }
   return (
     <Form {...form}>
-      <div className="sm:w-420 flex flex-center flex-col items-center">
+      <div className="sm:w-420 flex flex-center flex-col items-center w-4/5 mx-auto">
         <h1 className="logo text-4xl mb-12">Foodies</h1>
         <h2 className="h3-bold md:h2-bold sm:pt-12">Créer un nouveau compte</h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">
@@ -86,7 +86,7 @@ const {mutateAsync:ouvrirSessionUtil} = useOuvrirSessionMutation ();
 
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-5 w-full mt-4"
+          className="flex flex-col gap-5 w-full mt-4 "
         >
           <FormField
             control={form.control}
@@ -155,7 +155,7 @@ const {mutateAsync:ouvrirSessionUtil} = useOuvrirSessionMutation ();
             Vous avez déjà un compte?{" "}
             <Link
               to="/ouvrirSession"
-              className="text-primary text-small-semibold ml-1"
+              className="font-bold text-small-semibold ml-1"
             >
               Ouvrir Session
             </Link>
