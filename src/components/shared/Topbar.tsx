@@ -1,14 +1,11 @@
 import { useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import '../../fonts.css'
-import { Button } from '../ui/button'
 import { useFermeressionMutation } from '@/lib/react-query/requetesEtMutations'
-import { useUtilContext } from '@/context/AuthContext'
 
 export default function Topbar() {
     const {mutate: fermerSession, isSuccess} = useFermeressionMutation();
     const navigate  = useNavigate();
-    const {util} = useUtilContext();
     useEffect(()=>{
         if(isSuccess) {
             navigate(0);

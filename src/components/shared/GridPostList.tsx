@@ -1,8 +1,6 @@
 import { Models } from "appwrite";
 import { Link } from "react-router-dom";
 
-import { useUtilContext } from "@/context/AuthContext";
-import { PubliStats } from "./PubliStats";
 
 type GridPostListProps = {
     publis: Models.Document[];
@@ -15,7 +13,6 @@ const GridPostList = ({
     showUtil = true,
     showStats = true,
 }: GridPostListProps) => {
-    const { util } = useUtilContext();
 
     return (
         <ul className="grid-container flex flex-wrap mx-auto justify-start">
