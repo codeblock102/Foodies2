@@ -8,7 +8,7 @@ export default function BarreBas() {
   const { util } = useUtilContext();
 
   return (
-    <section className="BarreBas flex justify-evenly items-center lg:hidden fixed bottom-14 bg-white w-10/12 h-14 md:ml-14 ml-8 rounded-full border-solid border-2 border-sky-500v">
+    <section className="BarreBas flex justify-evenly items-center lg:hidden fixed bottom-14 bg-white w-10/12 h-10 md:ml-14 ml-8 rounded-full border-solid border-2 border-sky-500v">
       {bottombarLinks.map((link) => {
         const isActive = pathname === link.route;
         return (
@@ -19,13 +19,13 @@ export default function BarreBas() {
               isActive && "rounded-[10px] bg-primary-500 "
             }   gap-1  transition`}>
             {link.label === "Creer Publi"?<div className='bg-orange-500 hover:bg-orange-600 py-2 px-4  inline-flex items-center rounded-full'>
-            <img src={link.imgURL} alt="" width={45}
-              height={40} />
+            <img src={link.imgURL} alt="" width={30}
+              height={30} />
      
     </div>:<img
               src={link.imgURL}
               alt={link.label}
-              width={30}
+              width={20}
               height={20}
               className={`${isActive && "invert-white"}`}
             />
